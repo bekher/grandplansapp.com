@@ -17,7 +17,7 @@ const typography = new Typography({
     'Arial',
     'sans-serif',
   ],
-  bodyFontFamily: ['Open Sans', 'Georgia', 'serif'],
+  bodyFontFamily: ['Noto Sans', 'sans-serif'],
   googleFonts: [
     {
       name: 'Quicksand',

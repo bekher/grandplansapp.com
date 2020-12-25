@@ -48,11 +48,23 @@ const HeroContainer = styled.div`
   flex-direction: column;
 `;
 
+const onCTAClicked = () => {
+  // eslint-disable-next-line
+  window.alert('Hi Amanda! This button does not do much yet but it will.');
+};
+
 const Home: React.FC<PageProps> = () => (
   <Main>
     <TopSection>
       <Title />
-      <Hamburger />
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={onCTAClicked}
+        onKeyDown={onCTAClicked}
+      >
+        <Hamburger />
+      </div>
     </TopSection>
     <HeroContainer>
       <HeroImage />
@@ -67,7 +79,7 @@ const Home: React.FC<PageProps> = () => (
       }}
     >
       <p>Be the first to try the Grand Plans App.</p>
-      <Button role="button">
+      <Button role="button" onClick={onCTAClicked}>
         <H3>Join wait list</H3>
       </Button>
     </div>
